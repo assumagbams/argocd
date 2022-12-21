@@ -1,1 +1,25 @@
 
++412  kubectl get all namespaces
++  413  kubectl get all -all namespaces
++  414  kubectl get ns
++  415  kubectl get all -argocd
++  416  kubectl get all -ns all
++  417  kubectl get all -ns argocd
++  418  kubectl get po -ns argocd
++  419  kubectl get po -n argocd
++  420  kubectl get svc -n argocd
++  421  kubectl edit svc/argocd-server
++  422  kubectl edit svc/argocd-server -n argocd
++  423  kubectl get svc -n argocd
++  424  kubectl edit svc/argocd-server -n argocd
++  425  kubectl get svc -n argocd
++  426  kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
++  427  kubectl port-forward svc/argocd-server -n argocd 8080:443
++  428  argoPass=$(kubectl -n argocd get secret argocd-initial-admin-secret \
++    -o jsonpath="{.data.password}" | base64 -d)
++  429  argoPass=$(kubectl -n argocd get secret argocd-initial-admin-secret \
++    -o jsonpath="{.data.password}" | base64 -d)
++  430  kubectl -n argocd get secret argocd-initial-admin-secret     -o jsonpath="{.data.password}" | base64 -d
++  431  kubectl -n argocd get secret argocd-initial-admin-secret     -o jsonpath="{.data.password}" | base64 -d && echo
+
+
